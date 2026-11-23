@@ -24,7 +24,7 @@ say "→ Finding the latest version…"
 TAG=$(curl -fsSL "https://api.github.com/repos/$REPO/releases/latest" | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p' | head -1)
 [ -n "$TAG" ] || fail "could not reach GitHub. Check your internet connection."
 VERSION="${TAG#v}"
-FILE="RealtimeVoiceTranslator-$VERSION-mac-$ARCH.dmg"
+FILE="RealtimeVoiceTranslator-mac-$ARCH.dmg"
 BASE="https://github.com/$REPO/releases/download/$TAG"
 
 TMP=$(mktemp -d)

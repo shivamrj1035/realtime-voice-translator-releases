@@ -7,7 +7,7 @@ $repo = 'shivamrj1035/realtime-voice-translator-releases'
 Write-Host '-> Finding the latest version...' -ForegroundColor Cyan
 $rel = Invoke-RestMethod "https://api.github.com/repos/$repo/releases/latest"
 $version = $rel.tag_name.TrimStart('v')
-$file = "RealtimeVoiceTranslator-$version-win-x64.exe"
+$file = "RealtimeVoiceTranslator-win-x64.exe"
 $base = "https://github.com/$repo/releases/download/$($rel.tag_name)"
 $tmp = Join-Path $env:TEMP "rvt-$version"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
