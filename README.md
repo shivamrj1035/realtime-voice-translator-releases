@@ -22,6 +22,22 @@ Not sure which Mac you have? Apple menu → **About This Mac**. "Chip: Apple M�
 
 ## 2. Install
 
+### Easiest: one command (no security warnings)
+
+**Mac:** open **Terminal** (press ⌘ Space, type *Terminal*, press Enter), paste this line and press Enter:
+```
+curl -fsSL https://raw.githubusercontent.com/shivamrj1035/realtime-voice-translator-releases/main/install.sh | bash
+```
+
+**Windows:** open **PowerShell** (Start menu, type *PowerShell*), paste this line and press Enter:
+```
+irm https://raw.githubusercontent.com/shivamrj1035/realtime-voice-translator-releases/main/install.ps1 | iex
+```
+
+The command picks the right version for your computer, checks the download against the published SHA-256 checksum, installs the app and opens it. You can read exactly what it does first: [install.sh](install.sh) · [install.ps1](install.ps1).
+
+### Or: download the file manually
+
 ### macOS
 1. Double-click the `.dmg` and drag **Realtime Voice Translator** into **Applications**.
 2. Open it from Applications. The first time, macOS says it *"cannot be opened because Apple cannot check it"*. This is expected: the app isn't from the App Store yet.
